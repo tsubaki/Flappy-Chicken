@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 /// <summary>
@@ -6,16 +6,19 @@ using System.Collections;
 /// </summary>
 public class PlayerController : MonoBehaviour
 {
+	[SerializeField]
+	GameObject hitEffect;
+
 	void Start ()
 	{
-		ChangeGameState (GameController.Instance.gameState.Value);
-		GameController.Instance.gameState.changed += ChangeGameState;
+		ChangeGameState (GameController.gameState.Value);
+		GameController.gameState.AddListener( ChangeGameState );
 	}
 
 	void OnDestroy ()
 	{
 		if (GameController.Instance != null)
-			GameController.Instance.gameState.changed -= ChangeGameState;
+			GameController.gameState.RemoveListener( ChangeGameState );
 	}
 
 	void ChangeGameState (GameController.GameState state)
@@ -38,7 +41,11 @@ public class PlayerController : MonoBehaviour
 
 	void OnCollisionEnter2D (Collision2D  cal)
 	{
-		GameController.Instance.gameState.Value = GameController.GameState.GameOver;
+		if( GameController.gameState.Value == GameController.GameState.Play ){
+			GameObject.Instantiate(hitEffect, cal.contacts[0].point, Quaternion.identity);
+		}
+
+		GameController.gameState.Value = GameController.GameState.GameOver;
 	}
 
 	private bool isJumpRequest;

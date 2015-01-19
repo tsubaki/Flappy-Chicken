@@ -9,6 +9,11 @@ public class UVScroll : MonoBehaviour
 	void Update ()
 	{
 		current += Time.deltaTime * speed;
+		if( current > 1 ){
+			current -= 1;
+		}
+
+
 		renderer.material.SetTextureOffset ("_MainTex", new Vector2 (current, 0));
 	}
 }

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 /// <summary>
@@ -13,14 +13,14 @@ public class BoadManager : MonoBehaviour
 		boadPool = Pool.GetObjectPool(boadObject);
 		boadPool.Interval = 0;
 
-		ChangeGameState(GameController.Instance.gameState.Value);
-		GameController.Instance.gameState.changed += ChangeGameState;
+		ChangeGameState(GameController.gameState.Value);
+		GameController.gameState.AddListener(ChangeGameState);
 	}
 
 	void OnDestroy()
 	{
 		if( GameController.Instance != null)
-			GameController.Instance.gameState.changed -= ChangeGameState;
+			GameController.gameState.RemoveListener(ChangeGameState);
 	}
 
 	void ChangeGameState( GameController.GameState state )
@@ -65,6 +65,11 @@ public class BoadManager : MonoBehaviour
 		obj.transform.parent = transform;
 
 		obj.transform.localPosition = new Vector3(0, y, 0);
+
+		var angle = Random.Range(-15, 15);
+		obj.transform.localRotation = Quaternion.AngleAxis(angle, transform.forward);
+
+
 		obj.SetActive (true);
 	}
 }

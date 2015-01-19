@@ -3,46 +3,28 @@ using System.Collections;
 using System;
 
 [System.Serializable]
-public class NotificationObject<T>
+public class NotificationObject<T> : UnityEngine.Events.UnityEvent<T>
 {
-	public delegate void NotificationAction (T t);
-	
 	private T data;
-	
+
+	public NotificationObject(){}
 	public NotificationObject (T t)
 	{
 		Value = t;
 	}
-	
-	public NotificationObject ()
-	{
-	}
-	
-	~NotificationObject ()
-	{ 
-		Dispose ();
-	}
-	
-	public UnityEngine.Events.UnityAction<T> changed;
-	
+
 	public T Value {
 		get {
 			return data;
 		}
 		set {
 			data = value;
-			Notice ();
+			Invoke(data);
 		}
 	}
-	
-	private void Notice ()
+
+	public void Dispose()
 	{
-		if (changed != null)
-			changed (data);
-	}
-	
-	public void Dispose ()
-	{
-		changed = null;
+		RemoveAllListeners();
 	}
 }
