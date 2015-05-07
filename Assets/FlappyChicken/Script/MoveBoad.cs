@@ -8,6 +8,6 @@ public class MoveBoad : MonoBehaviour
 {
 	void FixedUpdate ()
 	{
-		rigidbody2D.velocity = -Vector2.right;
+		GetComponent<Rigidbody2D>().velocity = -Vector2.right;
 	}
 }

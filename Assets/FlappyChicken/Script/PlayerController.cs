@@ -26,15 +26,15 @@ public class PlayerController : MonoBehaviour
 		switch (state) {
 		case GameController.GameState.Title:
 			enabled = false;
-			rigidbody2D.isKinematic = true;
+			GetComponent<Rigidbody2D>().isKinematic = true;
 			break;
 		case GameController.GameState.Play:
 			enabled = true;
-			rigidbody2D.isKinematic = false;
+			GetComponent<Rigidbody2D>().isKinematic = false;
 			break;
 		case GameController.GameState.GameOver:
 			enabled = false;
-			rigidbody2D.velocity = Vector3.zero;
+			GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 			break;
 		}
 	}
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
 	{
 		if (isJumpRequest) {
 			isJumpRequest = false;
-			rigidbody2D.velocity = Vector3.up * power;
+			GetComponent<Rigidbody2D>().velocity = Vector3.up * power;
 		}
 	}
 }

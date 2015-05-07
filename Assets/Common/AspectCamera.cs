@@ -14,7 +14,7 @@ public class AspectCamera : MonoBehaviour
 	void Start ()
 	{
 		aspectRate = (float)aspect.x / aspect.y;
-		_camera = camera;
+		_camera = GetComponent<Camera>();
 		
 		CreateBackgroundCamera ();
 		UpdateScreenRate ();

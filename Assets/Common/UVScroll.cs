@@ -14,6 +14,6 @@ public class UVScroll : MonoBehaviour
 		}
 
 
-		renderer.material.SetTextureOffset ("_MainTex", new Vector2 (current, 0));
+		GetComponent<Renderer>().material.SetTextureOffset ("_MainTex", new Vector2 (current, 0));
 	}
 }
