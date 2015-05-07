@@ -14,9 +14,9 @@ public class Analytics : MonoBehaviour {
 			UnityAnalytics.StartSDK (projectId);
 			isCalled = true;
 		}
-		UnityAnalytics.Transaction("12345abcde", 0.99m, "USD", null, null);
 
 		GameController.score.AddListener( (score) => {
+			UnityAnalytics.Transaction("12345abcde", 0.99m, "USD", null, null);
 		});
 
 		GameController.gameState.AddListener( (state) =>{
