@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 25cba84554a2d495e8e93173fb7566cb
+labels:
+- UnityAnalytics
 timeCreated: 1430781776
 licenseType: Pro
 PluginImporter:
@@ -8,9 +10,17 @@ PluginImporter:
   executionOrder: {}
   isPreloaded: 0
   platformData:
-    Any:
+    Android:
       enabled: 1
+      settings:
+        CPU: ARMv7
+    Any:
+      enabled: 0
       settings: {}
+    Editor:
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -1,8 +1,12 @@
 fileFormatVersion: 2
 guid: 1968da1f6a48d42eda4ac5063acabad9
+labels:
+- Effect
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

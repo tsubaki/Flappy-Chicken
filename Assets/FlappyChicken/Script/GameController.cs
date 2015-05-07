@@ -26,6 +26,8 @@ public class GameController : SingletonMonoBehaviour<GameController>
 		Retry
 	}
 
+	public static int retryCount = 0;
+
 	void Start()
 	{
 		Application.targetFrameRate = 60;
@@ -40,6 +42,7 @@ public class GameController : SingletonMonoBehaviour<GameController>
 	IEnumerator Restart()
 	{
 		yield return new WaitForSeconds(0.3f);
+		retryCount += 1;
 		Application.LoadLevel( Application.loadedLevel) ;
 	}
 

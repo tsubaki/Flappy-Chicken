@@ -1,8 +1,13 @@
 fileFormatVersion: 2
 guid: a9ca46a2d801a4fb4859ebd9ce20e8bb
+labels:
+- Component
+- Boad
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 2def6d536fa7f4de5880dc88dfef702b
+labels:
+- UnityAnalytics
 timeCreated: 1430781778
 licenseType: Pro
 PluginImporter:

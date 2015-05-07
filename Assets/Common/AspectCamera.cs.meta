@@ -1,8 +1,13 @@
 fileFormatVersion: 2
 guid: 1b2e571d4e76841a6bdd857b2ea049e4
+labels:
+- Common
+- Camera
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

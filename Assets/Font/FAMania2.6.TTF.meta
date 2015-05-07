@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: dba9ec880abfa4a97b32377a79aea277
+labels:
+- Font
 TrueTypeFontImporter:
   serializedVersion: 2
   fontSize: 16
@@ -12,3 +14,5 @@ TrueTypeFontImporter:
   customCharacters: 
   fontRenderingMode: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

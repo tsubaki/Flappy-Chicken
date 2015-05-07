@@ -1,8 +1,9 @@
 fileFormatVersion: 2
-guid: dd0c31f1a13854d16ae0892afa2cbb2b
+guid: 3bf5be5073a734eea8378c2ed9c96821
 labels:
-- Common
-- Background
+- UnityAnalytics
+timeCreated: 1431004400
+licenseType: Pro
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []

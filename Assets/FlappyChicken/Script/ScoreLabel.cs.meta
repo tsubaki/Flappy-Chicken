@@ -1,8 +1,14 @@
 fileFormatVersion: 2
 guid: 0ba1e2ef5d9f0475a93ea7e3eeadff7e
+labels:
+- Component
+- Score
+- Ui
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

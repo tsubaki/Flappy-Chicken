@@ -1,8 +1,13 @@
 fileFormatVersion: 2
 guid: 0c896367b0a6f41c7880fd9cd70300b8
+labels:
+- Component
+- Ui
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
